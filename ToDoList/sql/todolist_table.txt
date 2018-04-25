@@ -1,0 +1,16 @@
+user
+	id
+	name
+	email
+	password
+	registerTime
+
+todo
+	id
+	user_id
+	content
+	isCompleted	boolean
+	completedTime	
+
+
+Scaffold-DbContext "server=localhost;port=3306;user=root;password=1234;database=todolist;" Pomelo.EntityFrameworkCore.MySql -OutputDir Models

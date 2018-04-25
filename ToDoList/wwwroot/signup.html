@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="css/signup/style.css" rel="stylesheet" />
+    <!--<style> [v-cloak] { display: none; } </style>-->
+    <title>Todo List - Signup</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header class="row">
+            <div class="col-12">
+                <h1 class="text-center">Todo List (asp.net core + vue.js)</h1>
+            </div>
+        </header>
+        <section class="row">
+            <div class="col-12">
+                <h2 class="text-center">建立帳號</h2>
+                <div id="signupFailAlert" class="alert alert-danger alert-dismissible collapse" role="alert">
+                    錯誤訊息
+                </div>
+                <form id="signupform">
+                    <div class="form-group">
+                        <input name="name" type="text" class="form-control" placeholder="名字" required>
+                    </div>
+                    <div class="form-group">
+                        <input name="email" type="email" class="form-control" placeholder="電子郵件" required>
+                    </div>
+                    <div class="form-group">
+                        <input name="password" type="password" class="form-control" placeholder="密碼" required>
+                    </div>
+                    <button type="submit" class="btn btn-block btn-danger">註冊</button>
+                </form>
+                <hr>
+                <p>
+                    <a href="login.html">已有帳號? 登入</a>
+                </p>
+            </div>
+        </section>
+        <footer class="row">source code: <a href="https://github.com/YidaChen/TodoList" target="_blank">https://github.com/YidaChen/TodoList</a></footer>
+    </div>
+    <script src="/node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/node_modules/axios/dist/axios.min.js"></script>
+    <script src="js/signup/app.js"></script>
+</body>
+
+</html>

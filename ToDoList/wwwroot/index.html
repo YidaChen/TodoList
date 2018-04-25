@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
+	<link href="css/index/style.css" rel="stylesheet" />
+	<!--<style> [v-cloak] { display: none; } </style>-->
+	<title>Todo List</title>
+</head>
+
+<body>
+	<div class="container-fluid" id="todoapp">
+		<header class="row">
+			<div class="col-12">
+        <h1 class="text-center">Todo List (asp.net core + vue.js)</h1>
+        <p class="text-right">歡迎 <span>{{userName}} </span> <button class="btn btn-sm" @click="logout">登出</button></p>
+			</div>
+		</header>
+		<section class="row">
+			<div class="col-12">
+				<input class="form-control new-todo"  autofocus autocomplete="off" placeholder="有甚麼事需要完成的嗎?" v-model="newTodo" @keyup.enter="addTodo">
+			</div>
+			<div class="col-12">
+				<ul class="list-group"><!--editing completed-->
+            <li class="liTodo list-group-item" v-for="todo in filteredTodos" :class="{completed: todo.IsCompleted, editing: todo == editedTodo}">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <input type="checkbox" v-model="todo.IsCompleted" @change="putTodo(todo)">
+                    </div>
+                  </div>
+                  <label class="form-control" @dblclick="editingTodo(todo)">{{todo.Content}}</label>
+                  <input class="form-control edit" type="text" v-model="todo.Content" v-todo-focus="todo == editedTodo" @blur="doneEdit(todo)" @keyup.enter="doneEdit(todo)" @keyup.esc="cancelEdit(todo)">
+                  <i class="fa fa-times float-right deleteTodo" @click="deleteTodo(todo)"></i>
+                </div>
+              </li>
+				</ul>
+      </div>
+      <div class="col-12">
+      <div id="todoFooter">
+        <span>待完成<strong v-text="remaining"></strong>項</span>
+        <a href="#/active" :class="{selected: visibility == 'active'}">待辦</a><a href="#/completed" :class="{selected: visibility == 'completed'}">已完成</a><a href="#/all" :class="{selected: visibility == 'all'}">全部</a>  
+        <!--<button class="btn btn-sm float-right">清除已完成</button> 找時間做-->
+      </div>
+    </div>
+		</section>
+		<footer class="row">source code: <a href="https://github.com/YidaChen/TodoList" target="_blank">https://github.com/YidaChen/TodoList</a></footer>
+	</div>
+	<script src="/node_modules/jquery/dist/jquery.slim.min.js"></script>
+	<script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/node_modules/director/build/director.min.js"></script>
+  <script src="/node_modules/vue/dist/vue.js"></script>
+	<script src="/node_modules/axios/dist/axios.min.js"></script>
+  <script src="js/index/ajax.js"></script>
+  <script src="js/index/app.js"></script>
+  <script src="js/index/router.js"></script>
+</body>
+
+</html>

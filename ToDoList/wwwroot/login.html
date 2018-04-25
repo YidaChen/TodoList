@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="css/login/style.css" rel="stylesheet" />
+    <!--<style> [v-cloak] { display: none; } </style>-->
+    <title>Todo List - Login</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header class="row">
+            <div class="col-12">
+                <h1 class="text-center">Todo List (asp.net core + vue.js)</h1>
+            </div>
+        </header>
+        <section class="row">
+            <div class="col-12">
+                <h2 class="text-center">登入</h2>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        信箱:user01@gmail.com，密碼:user01，已預先填入
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div id="loginFailAlert" class="alert alert-danger alert-dismissible collapse" role="alert">
+                            錯誤訊息
+                          </div>
+            <form id="loginform">
+                <div class="form-group">
+                    <input name="email" type="email" class="form-control" placeholder="電子郵件" value="user01@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <input name="password" type="password" class="form-control" placeholder="密碼" value="user01" required>
+                </div>
+                <button type="submit" class="btn btn-block btn-danger">登入</button>
+            </form>
+            <hr>
+            <p><a href="signup.html">建立帳號</a></p>
+        </div>
+        </section>
+        <footer class="row">source code: <a href="https://github.com/YidaChen/TodoList" target="_blank">https://github.com/YidaChen/TodoList</a></footer>
+    </div>
+    <script src="/node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/node_modules/axios/dist/axios.min.js"></script>
+    <script src="js/login/app.js"></script>
+</body>
+
+</html>

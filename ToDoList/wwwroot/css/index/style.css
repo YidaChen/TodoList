@@ -1,0 +1,44 @@
+body {
+    background-color: #f5f5f5;
+}
+header h1 {
+    color:rgba(175, 47, 47, 0.30);
+}
+li {
+    padding: 0 !important;
+}
+.completed label:first-of-type {
+    text-decoration: line-through;
+    color: gray;
+}
+.edit{
+    display: none;
+}
+li.editing .edit {
+    position: absolute;
+    width: 100%;
+    display: block;
+}
+#todoFooter {
+    background: white;
+    border-radius: 0 0 20% 20%;
+    border: 1px solid gainsboro;
+    padding-top: 3px;
+    padding-bottom: 3%;
+}
+#todoFooter a {
+    padding: 0 1%;
+    color: grey;
+}
+#todoFooter a:hover{
+    text-decoration-line: none;
+}
+.selected {
+    border: 1px solid rgba(175, 47, 47, 0.2);
+}
+.deleteTodo {
+    display: none;
+}
+li.liTodo:hover .deleteTodo {
+    display: block;
+}
