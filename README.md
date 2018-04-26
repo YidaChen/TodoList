@@ -15,6 +15,8 @@ https://dotnetcoretutorials.com/2017/03/10/creating-custom-middleware-asp-net-co
 
 https://vuejs.org/v2/guide/
 
+http://todomvc.com/
+
 https://stackoverflow.com/questions/42075858/cant-find-node-modules-after-deployment
 
 https://blogs.msdn.microsoft.com/appserviceteam/2016/09/08/troubleshooting-faq-for-mysql-in-apppreview/
