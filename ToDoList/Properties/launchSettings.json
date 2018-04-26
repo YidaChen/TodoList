@@ -11,18 +11,20 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/values",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      "launchUrl": "",
+					"environmentVariables": {
+						"ASPNETCORE_DETAILEDERRORS": "1",
+						"ASPNETCORE_ENVIRONMENT": "Development"
+					}
     },
     "ToDoList": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/values",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
+      "launchUrl": "",
+					"environmentVariables": {
+						"ASPNETCORE_DETAILEDERRORS": "1",
+						"ASPNETCORE_ENVIRONMENT": "Development"
+					},
       "applicationUrl": "http://localhost:61965/"
     }
   }
